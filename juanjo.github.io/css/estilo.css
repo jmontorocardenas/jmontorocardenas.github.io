@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin: 0px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+    background-image: url("fondo.jpg");
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    color: beige;
+    text-align: center;
+}
+
+a {
+    color: darkgoldenrod;
+}
+
+/* INDEX */
+
+.nav1 {
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    background: black;
+    padding: 20px;
+    border: solid 2px beige;
+    border-radius: 30px;
+    height: 80px;
+    width: 60%;
+    margin: 0px auto;
+
+    transition: width 1.5s;
+}
+
+.nav1:hover {
+    width: 100%;
+}
+
+.nav1>a{
+    text-decoration: none;
+    color: beige;
+}
+
+.header1 {
+    margin-top: 50px;
+}
+
+.headerh2 {
+    color: black;
+    display: inline-block;
+    background-color: beige;
+    width: 500px;
+    border-radius: 15px;
+}
+
+h3 {
+    color: black;
+    background-color: beige;
+    width: 400px;
+    border-radius: 15px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.header1>div>div>a {
+    margin-top: 25px;
+    display: inline-block;
+    background-color: beige;
+    color: rgb(54, 54, 54);
+    width: 300px;
+    border-radius: 15px;
+    text-decoration: none;
+}
+
+img {
+    margin: 30px auto;
+    width: 75%;
+}
+
+/* MAIN */
+MAIN {
+    text-align: left;
+    margin: 10px;
+}
+
+MAIN>p {
+    margin-top: 5x;
+}
+
+div {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* ARTICLE */
+
+article {
+    font-style: italic;
+}
+
+/* FOOTER */
+
+footer {
+    clear: both;
+    height:50px;
+    background-color: darkgoldenrod;
+    margin-top: 50px;
+    padding: 15px;
+}

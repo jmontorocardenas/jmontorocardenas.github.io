@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="css/estilo.css" type="text/css">
+        <title>SSH</title>
+    </head>
+    <body>
+        <nav class="nav1">
+            <a href="index.html" target="_self">
+                <h1>jmontorocardenas</h1>
+            </a>
+        </nav>
+        <header class="header1">
+            <h2 class="headerh2">SSH</h2>
+        </header>
+        <main>
+            <p>
+                SSH o Secure Shell, es un protocolo de administración remota que le permite a
+                los usuarios controlar y modificar sus servidores remotos a través de Internet a
+                través de un mecanismo de autenticación. Proporciona un mecanismo para
+                autenticar un usuario remoto, transferir entradas desde el cliente al host y
+                retransmitir la salida de vuelta al cliente. El servicio se creó como un
+                reemplazo seguro para el Telnet sin cifrar y utiliza técnicas criptográficas
+                para garantizar que todas las comunicaciones hacia y desde el servidor remoto
+                sucedan de manera encriptada.
+            </p>
+            <h3>Añadir usuarios con SSH</h3>
+            <p>
+                Antes de añadir algún usuarios debemos instalar SSH, usando el siguiente comando
+                : sudo apt-get install openssh-server
+            </p>
+            <img src="img/capturassh1.png" alt="capturassh1">
+            <div>Ahora que tenemos SSH bien seguro es hora de que veais para qué sirve.
+                Parto de que tenéis dos equipos, el que tenéis delante y al que queréis
+                conectar. Obviamente debéis tener una cuenta en el segundo para poder entrar. La
+                forma de conectar por defecto es la siguiente:</div>
+            <article>$ ssh tu_cuenta@ip_del_ordenador_remoto</article>
+            <div>Esto sería si no hubiéramos cambiado el puerto, ya que intentaría conectar
+                por el puerto 22 que es el puerto por defecto del cliente. Podéis cambiarlo si
+                queréis para que conecte por defecto por el puerto que le digáis en lugar del 22
+                editando el fichero /etc/ssh/ssh_config. Descomentáis (si está comentada) la
+                opción “Port” y en lugar de “22” ponéis el que queráis. La otra opción, que es
+                lo más normal, es simplemente indicarle en la línea de conexión qué puerto ha de
+                usar:</div>
+            <article>$ ssh -p puerto tu_cuenta@ip_del_ordenador_remoto</article>
+            <div>Para que lo veais más claro os voy a poner un ejemplo. Mi portátil está en
+                la ip 192.168.1.5 y el puerto SSH que tengo para el mismo es el 4884. La cuenta
+                que voy a usar para conectarme es “juanjo”, así que para conectar desde mi PC de
+                sobremesa al portatil sería:</div>
+            <article>$ ssh -p 4884 juanjo@192.168.1.5</article>
+            <div>Tras esto me pedirá la contraseña:</div>
+            <article>juanjo@192.168.1.5's password:</article>
+            <div>La introducimos y tras un texto de “bienvenida” veremos que nuestro prompt
+                ha cambiado a “nombre_cuenta@nombre_manquina”. Mi portatil se llama montoro, así
+                pues mi prompt es:</div>
+            <article>juanjo@montoro:~$</article>
+            <div>A partir de este instante tu consola está controlando el equipo remoto.
+                Estarás en el home de tu cuenta en la máquina remota.</div>
+            <h3>Comando nmap localhost</h3>
+            <p>
+                El comando Nmap también conocido como Network Mapper es una herramienta de
+                código abierto muy versátil para los administradores de sistemas Linux / red.
+                Nmap se utiliza para explorar redes, realizar análisis de seguridad, auditoría
+                de red y búsquedas de puertos abiertos en la máquina remota.
+            </p>
+            <img src="img/capturassh2.png" alt="capturassh2">
+        </main>
+        <footer>
+            <p>Juan José Montoro Cárdenas</p>
+        </footer>
+    </body>
+</html>

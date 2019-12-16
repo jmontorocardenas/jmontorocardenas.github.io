@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="css/estilo.css" type="text/css">
+        <title>FTP</title>
+    </head>
+    <body>
+        <nav class="nav1">
+            <a href="index.html" target="_self">
+                <h1>jmontorocardenas</h1>
+            </a>
+        </nav>
+        <header class="header1">
+            <h2 class="headerh2">FTP</h2>
+        </header>
+        <main>
+            <h3>Instala el servidor vsftpd en la Raspberry Pi con que tenga las siguientes
+                características:</h3>
+            <p>Que sea un servidor FTP anónimo para descargas.</p>
+            <img src="img/ftp1.png" alt="ftp1">
+            <p>Que sea un servidor FTP para usuarios de sistema y que puedan tanto descargar
+                como subir archivos.</p>
+            <img src="img/ftp2.png" alt="ftp2">
+            <p>Funcionar en modo pasivo.</p>
+            <article>
+                <p>(Ya viene configurado en modo pasivo por defecto)</p>
+            </article>
+            <p>Habilita los logs.</p>
+            <article>
+                <p>Usamos el comando "sudo less/var/log/vsftpd.log"
+                </p>
+            </article>
+            <img src="img/ftp4.png" alt="ftp4">
+            <p>Cambia el mensaje de bienvenida.</p>
+            <article>
+                <p>Ponemos el comando "sudo nano etc/motd"</p>
+                <p>Buscamos en internet un convertidor de texto a ascii y solamente tendremos
+                    que copiarlo y pegarlo.</p>
+            </article>
+            <img src="img/ftp5.png" alt="ftp5">
+        </main>
+        <footer></footer>
+    </body>
+</html>
